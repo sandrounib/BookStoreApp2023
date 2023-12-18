@@ -4,15 +4,18 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>5d91eaff-8146-4a3d-a8ec-272baeda7980</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.25" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\BookStore.Application\BookStore.Application.csproj" />
     <ProjectReference Include="..\BookStore.Domain\BookStore.Domain.csproj" />
+    <ProjectReference Include="..\BookStore.Infraestructure\BookStore.Infraestructure.csproj" />
   </ItemGroup>
 
 </Project>
