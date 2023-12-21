@@ -10,6 +10,14 @@ builder.Services.AddDatabase(builder.Configuration);
 
 var app = builder.Build();
 
+//TODO: FUNCIONOU O SWAGGER DEPOIS DO IF ABAIXO
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
 
 app.UseHttpsRedirection();
 

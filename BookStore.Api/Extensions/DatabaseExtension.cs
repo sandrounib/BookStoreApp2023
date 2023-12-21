@@ -1,4 +1,5 @@
-﻿using BookStore.Infraestructure.Data;
+﻿using BookStore.Domain.Interfaces;
+using BookStore.Infraestructure.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookStore.Api.Extensions
@@ -12,6 +13,8 @@ namespace BookStore.Api.Extensions
                 opt.UseInMemoryDatabase(configuration.GetConnectionString("ConnectionString"));
 
             });
+
+            services.AddScoped<IBooksRepository, BooksRepository>();
         }
     }
 }
